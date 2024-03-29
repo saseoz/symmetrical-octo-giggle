@@ -1,0 +1,94 @@
+:root {
+    --clr-cyan: hsl(185, 75%, 39%);
+
+    --clr-gray-100: hsl(0, 0%, 59%);
+    --clr-gray-200: hsl(227, 10%, 46%);
+    --clr-gray-300:  hsl(229, 23%, 23%);
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 18px;
+
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    margin: 1rem;
+
+    background-color: var(--clr-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 51vw bottom 32vh, left 35vw top 40vh;
+}
+
+img {
+    max-width: 100%;
+}
+.container {
+    background-color: hsl(0, 0%, 100%);
+    max-width: 330px;
+    text-align: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 15px 10px  rgba(0, 0, 0, 0.146);
+}
+.img-avatar {
+    margin-top: -3.4rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: 6px solid white;
+}
+.name {
+    margin-bottom: 1.5rem;
+}
+.name h1 {
+    margin-bottom: .4rem;
+}
+.name h2 {
+    font-size: 1rem;
+}
+.stat {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.6;
+}
+h1, h3 {
+    font-size: 1.2rem;
+    color: var(--clr-gray-300);
+    font-weight: var(--fw-bold);
+}
+.name span, .name h2, .stat p {
+    font-weight: var(--fw-normal);
+    color: var(--clr-gray-200);
+}
+.stat {
+    border: 1px solid hsla(0, 0%, 59%, 0.323);
+    display: flex;
+    justify-content: space-around;
+}
+.stat p {
+    font-size: .7rem;
+    letter-spacing: 1.5px;
+}
+@media (min-width: 700px) {
+    body {
+        margin: 0rem;
+
+        background-color: var(--clr-cyan);
+        background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: right 51vw bottom 32vh, left 50vw top 50vh;
+    }
+    .container {
+        max-width: 350px;
+    } 
+}
